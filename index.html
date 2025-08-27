@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point on Line Checker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .expander { margin-top: 1em; }
+        .expander button { background: #0078d7; color: #fff; border: none; padding: 0.5em 1em; border-radius: 4px; cursor: pointer; }
+        .expander-content { display: none; margin-top: 1em; background: #f1f1f1; padding: 1em; border-radius: 4px; }
+        canvas { background: #fff; border: 1px solid #ccc; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Is the Point on the Line?</h2>
+        <div id="problem"></div>
+        <form id="answerForm">
+            <label>Is the point on the line?</label><br>
+            <input type="radio" name="userAnswer" value="yes" id="yes"><label for="yes">Yes</label>
+            <input type="radio" name="userAnswer" value="no" id="no"><label for="no">No</label>
+            <button type="submit">Check</button>
+        </form>
+        <div id="feedback"></div>
+        <div class="expander">
+            <button id="showSolution">Show Solution</button>
+            <div class="expander-content" id="solutionBox"></div>
+        </div>
+    <!-- Canvas will be rendered in solution expander -->
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
